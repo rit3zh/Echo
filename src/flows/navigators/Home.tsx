@@ -8,6 +8,7 @@ import { useInitialFonts, Fonts } from "../../hooks/custom/useFont";
 import { ChatStackScreenNavigator } from "../screens/ChatStack";
 import { HomeStackScreenNavigator } from "../screens/HomeStack";
 import { SettingsStackScreenNavigator } from "../screens/SettingsStack";
+import { Theme } from "../../theme/app/constants/theme";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ export function HomeNavigator() {
       tabBar={(props) => (
         <ReAnimatedBottomTabs
           moverStyle={{
-            backgroundColor: "black",
+            backgroundColor: Theme.dark.backgroundColor,
             borderRadius: 14,
             elevation: 3,
           }}
@@ -38,7 +39,7 @@ export function HomeNavigator() {
           margin={20}
           activeColor="white"
           contentContainerStyle={{
-            backgroundColor: "transparent",
+            backgroundColor: Theme.dark.backgroundColor,
             borderRadius: 14,
             elevation: 3,
           }}
@@ -50,7 +51,7 @@ export function HomeNavigator() {
         name={RootScreenEnum.RootTab1}
         component={HomeStackScreenNavigator}
         options={{
-          tabBarIcon: () => <Ionicons name={"home"} size={24} color="black" />,
+          tabBarIcon: () => <Ionicons name={"home"} size={24} color="white" />,
         }}
       />
       <BottomTab.Screen
@@ -58,7 +59,7 @@ export function HomeNavigator() {
         component={ChatStackScreenNavigator}
         options={{
           tabBarIcon: () => (
-            <Ionicons name={"chatbubble"} size={24} color="black" />
+            <Ionicons name={"chatbubble"} size={24} color={"white"} />
           ),
         }}
       />
@@ -67,7 +68,7 @@ export function HomeNavigator() {
         component={SettingsStackScreenNavigator}
         options={{
           tabBarIcon: () => (
-            <Ionicons name={"settings"} size={24} color="black" />
+            <Ionicons name={"settings"} size={24} color={"white"} />
           ),
         }}
       />

@@ -4,6 +4,7 @@ import { Home } from "../../pages/screens";
 
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { View } from "react-native";
+import { Theme } from "../../theme/app/constants/theme";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,13 +15,25 @@ export function HomeStackScreenNavigator() {
         name={"HomeScreen"}
         component={Home}
         options={({}) => ({
+          title: "Explore",
+          headerLargeTitle: true,
+          headerLargeStyle: {
+            backgroundColor: Theme.dark.backgroundColor,
+          },
+          headerStyle: {
+            backgroundColor: Theme.dark.backgroundColor,
+          },
+          headerTitleStyle: {
+            color: Theme.dark.title,
+          },
+
           headerLeft: () => (
             <View
               style={{
                 right: 15,
               }}
             >
-              <DrawerToggleButton tintColor="black" />
+              <DrawerToggleButton tintColor="white" />
             </View>
           ),
         })}
