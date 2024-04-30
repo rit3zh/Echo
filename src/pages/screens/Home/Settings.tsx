@@ -24,6 +24,7 @@ import {
 import {
   ProfileComponent,
   CustomDescriptiveText,
+  ScreenTimeout,
 } from "../../../components/import/index";
 
 export function Settings() {
@@ -221,30 +222,32 @@ export function Settings() {
   ];
 
   return (
-    <SafeAreaView
-      style={{
-        backgroundColor: Theme.dark.backgroundColor,
-        flex: 1,
-      }}
-    >
-      <ScrollView
+    <ScreenTimeout timeout={2000}>
+      <SafeAreaView
         style={{
-          bottom: 30,
-          marginBottom: 10,
+          backgroundColor: Theme.dark.backgroundColor,
+          flex: 1,
         }}
       >
-        <TouchableWithoutFeedback>
-          <List header="profile" data={_profile} marginTop={true} />
-        </TouchableWithoutFeedback>
+        <ScrollView
+          style={{
+            bottom: 30,
+            marginBottom: 10,
+          }}
+        >
+          <TouchableWithoutFeedback>
+            <List header="profile" data={_profile} marginTop={true} />
+          </TouchableWithoutFeedback>
 
-        <List header="Preference" data={_list} />
-        <List header="Notifications" data={_notifications} />
-        <List header="Resources" data={_resources} />
-        <Button data={_button} destructive={true} />
-        <CustomDescriptiveText
-          content={Constants.App.Text.DescriptiveEndCreditsText}
-        />
-      </ScrollView>
-    </SafeAreaView>
+          <List header="Preference" data={_list} />
+          <List header="Notifications" data={_notifications} />
+          <List header="Resources" data={_resources} />
+          <Button data={_button} destructive={true} />
+          <CustomDescriptiveText
+            content={Constants.App.Text.DescriptiveEndCreditsText}
+          />
+        </ScrollView>
+      </SafeAreaView>
+    </ScreenTimeout>
   );
 }

@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-userpic/src/helpers.ts b/node_modules/react-native-userpic/src/helpers.ts
+index 417dc69..b3a9de4 100644
+--- a/node_modules/react-native-userpic/src/helpers.ts
++++ b/node_modules/react-native-userpic/src/helpers.ts
+@@ -4,7 +4,7 @@ import { Appearance, ImageSourcePropType, PixelRatio } from 'react-native';
+ /* istanbul ignore next */
+ export function debug(...args: any) {
+   if (process.env.NODE_ENV === 'development') {
+-    console.log(...args);
++    return
+   }
+ }
+ 

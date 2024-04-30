@@ -17,6 +17,7 @@
     "@react-native-async-storage/async-storage": "1.21.0",
     "@react-native-firebase/app": "^19.2.2",
     "@react-native-firebase/firestore": "^19.2.2",
+    "@react-native-segmented-control/segmented-control": "2.4.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/drawer": "^6.6.15",
     "@react-navigation/native": "^6.1.17",
@@ -59,7 +60,7 @@
     "rn-emoji-keyboard": "^1.6.1",
     "rn-material-ui-textfield": "^1.0.9",
     "typescript": "^5.3.0",
-    "@react-native-segmented-control/segmented-control": "2.4.1"
+    "expo-system-ui": "~2.9.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

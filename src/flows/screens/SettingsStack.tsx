@@ -23,7 +23,9 @@ export function SettingsStackScreenNavigator() {
           headerTitleStyle: {
             color: Theme.dark.title,
           },
-
+          contentStyle: {
+            backgroundColor: "#000",
+          },
           headerSearchBarOptions: {
             placement: "automatic",
             placeholder: "Search",
