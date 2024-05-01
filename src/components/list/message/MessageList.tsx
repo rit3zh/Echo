@@ -11,18 +11,18 @@ import {
 import { ContextMenuView } from "react-native-ios-context-menu";
 
 // React Native UI DevKit
-import {
-  Item,
-  ISwipeableProps,
-  Separator,
-  Divider,
-} from "react-native-ui-devkit";
+import { Item, ISwipeableProps } from "react-native-ui-devkit";
 import { MessageDummyList, type Props } from "../../../constants";
 import { MessageCard } from "./MessageCard";
 import { Theme } from "../../../theme/app/constants/theme";
 
 let lastOpened: number = -1;
-const App = () => {
+
+interface AppProps {
+  onPress?: (name: string, avatar?: string) => any | void;
+}
+
+const App: React.FC<AppProps> = ({ onPress }: AppProps) => {
   const [data, setData] = useState(MessageDummyList);
 
   const closeLastOpened = (index: number) => {
@@ -46,6 +46,7 @@ const App = () => {
           notification={2}
         />
       ),
+      style: {},
 
       swipeable: {
         left: [
@@ -128,7 +129,7 @@ const App = () => {
           closeLastOpened(index);
         },
       },
-      onPress: async () => {},
+      onPress: async () => onPress(item.name, item.image),
     };
 
     return (

@@ -5,7 +5,7 @@ export * from "./Landing/Signin/SignIn";
 export * from "./Home/Home";
 export * from "./Home/Chat";
 export * from "./Home/Settings";
-
+export * from "./Home/Message";
 // Drawer
 export * from "./Home/Invite";
 export * from "./Home/Create";

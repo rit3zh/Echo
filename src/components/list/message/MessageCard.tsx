@@ -50,7 +50,7 @@ export function MessageCard({
             badgeColor="#007aff"
             badgeProps={{
               size: 24,
-              radius: 5,
+              radius: 9999,
               position: "top-left",
             }}
           />
