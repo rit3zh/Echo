@@ -41,6 +41,20 @@ export function ChatStackScreenNavigator() {
           headerShown: true,
           headerLargeTitleShadowVisible: true,
           autoHideHomeIndicator: true,
+          headerTitle: () => (
+            <SegmentedControl
+              values={["Chats", "Rooms"]}
+              style={{
+                width: 200,
+                alignSelf: "center",
+              }}
+              tintColor="#474747"
+              fontStyle={{ color: "gray" }}
+              activeFontStyle={{
+                color: "white",
+              }}
+            />
+          ),
         })}
         component={Chat}
       />
@@ -52,6 +66,7 @@ export function ChatStackScreenNavigator() {
           headerStyle: {
             backgroundColor: Theme.dark.backgroundColor,
           },
+
           headerTintColor: "white",
           headerTitle: () => (
             <>

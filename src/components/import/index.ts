@@ -4,3 +4,6 @@ export { default as ChatListComponent } from "../list/message/MessageList";
 export { default as ProfileComponent } from "../settings/profile/ProfileComponent";
 export { default as CustomDescriptiveText } from "../texts/custom/CustomDescriptiveText";
 export { default as ScreenTimeout } from "../screen-timeout/ScreenTimeout";
+export { default as IOSNavigationStyleCustomHeader } from "../header/navigation-style/CustomHeader";
+export { default as GiftedChatInputToolBarComponent } from "../gifted-chat/inpuToolBar/InputToolBar";
+export { default as GiftedChatBubbleComponent } from "../gifted-chat/bubble/GiftedChatBubble";

@@ -17,14 +17,16 @@ import { MessageCard } from "./MessageCard";
 import { Theme } from "../../../theme/app/constants/theme";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import { Constants } from "../../../constants/index";
+import GiftedChatContext from "../../gifted-chat/context/GiftedChatContext";
 
 let lastOpened: number = -1;
 
 interface AppProps {
   onPress?: (name: string, avatar?: string) => any | void;
+  onContextMenuPress?: (name, avatar?: string) => any | void;
 }
 
-const App: React.FC<AppProps> = ({ onPress }: AppProps) => {
+const App: React.FC<AppProps> = ({ onPress, onContextMenuPress }: AppProps) => {
   const [data, setData] = useState(MessageDummyList);
 
   const closeLastOpened = (index: number) => {
@@ -139,22 +141,11 @@ const App: React.FC<AppProps> = ({ onPress }: AppProps) => {
         previewConfig={{
           previewType: "CUSTOM",
           previewSize: "STRETCH",
-          backgroundColor: Theme.dark.backgroundColor,
+
           preferredCommitStyle: "pop",
         }}
-        renderPreview={() => (
-          <View>
-            <Text>Hello World</Text>
-            <Text>Hello World</Text>
-            <Text>Hello World</Text>
-          </View>
-        )}
-        onPressMenuPreview={() => {
-          Alert.alert(
-            "onPressMenuPreview Event",
-            `Menu preview was pressed...`
-          );
-        }}
+        renderPreview={() => <GiftedChatContext name={item.name} />}
+        onPressMenuPreview={() => onContextMenuPress(item.name, item.image)}
       >
         <Item
           marginTop={false}

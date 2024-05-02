@@ -1,168 +1,72 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TextInput,
-  StyleSheet,
-  Dimensions,
-  Keyboard,
-} from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import React, { useCallback, useLayoutEffect, useState } from "react";
 
 import { ContextMenuView } from "react-native-ios-context-menu";
 
+import EmojiPicker from "rn-emoji-keyboard";
+import { RNEmojiKeyboardThemeDark } from "../../../constants/rn-emoji/theme/RNEmojiTheme";
+
 // @GiftedChat
 import { Bubble, GiftedChat, type IMessage } from "react-native-gifted-chat";
+
+// @Params
 import { NativeStackHeaderProps } from "@react-navigation/native-stack";
+
+// Constants
 import { Theme } from "../../../theme/app/constants/theme";
-import { Ionicons } from "@expo/vector-icons";
+import { MENU_PROPS } from "../../../constants/context-menu/Config";
+
+// @Components
+import {
+  GiftedChatInputToolBarComponent,
+  GiftedChatBubbleComponent,
+} from "../../../components/import";
+
+// Hooks
+import { useKeyboardListener } from "../../../hooks";
 
 export function Message(props: NativeStackHeaderProps) {
   const params = props.route.params as any;
+
+  const [open, setOpen] = useState<boolean>(false);
+
   const [messages, setMessages] = useState<IMessage[]>([]);
-  const [topValue, setTopValue] = useState<number>(10);
-  useLayoutEffect(() => {
-    const keyboardDidOpenListener = Keyboard.addListener(
-      "keyboardWillShow",
-      () => setTopValue(0)
-    );
-    const keyboardDidHideListener = Keyboard.addListener(
-      "keyboardWillHide",
-      () => setTopValue(10)
-    );
-    return () => {
-      keyboardDidHideListener.remove();
-      keyboardDidOpenListener.remove();
-    };
-  }, []);
-  useLayoutEffect(() => {
-    setMessages([
-      {
-        _id: 1,
-        text: "Hello this is a long message written by 17 year old boy from India. He is seriously depressed about his life. He wanted to be happt but was unable to find any reason to be happy about.",
-        createdAt: new Date(),
-        user: {
-          _id: 1,
-          name: "React Native",
-          avatar: "https://placeimg.com/140/140/any",
-        },
-      },
-    ]);
-  }, []);
-  const onSend = useCallback((messages = []) => {
-    setMessages((previousMessages) =>
-      GiftedChat.append(previousMessages, messages)
-    );
-  }, []);
+  const topValue = useKeyboardListener(10);
+
   return (
-    <GiftedChat
-      messagesContainerStyle={{
-        backgroundColor: Theme.dark.backgroundColor,
-      }}
-      textInputProps={{
-        ...styles.textInputStyle,
-      }}
-      onLongPress={() => {}}
-      renderBubble={(props) => (
-        <SafeAreaView
-          style={{
-            marginBottom: 20,
-          }}
-        >
-          <ContextMenuView
-            menuConfig={{
-              menuTitle: "ContextMenuViewExample09",
-              menuItems: [
-                {
-                  actionKey: "save",
-                  actionTitle: "Save",
-                  // ...
-                },
-                {
-                  actionKey: "like",
-                  actionTitle: "Like",
-                  // ...
-                },
-                {
-                  actionKey: "play",
-                  menuState: "on",
-                  actionTitle: "Play",
-                  // ...
-                },
-              ],
-            }}
-            onPressMenuItem={({ nativeEvent }) => {
-              alert("onPressMenuItem Event");
-            }}
-          >
-            <Bubble {...props} />
-          </ContextMenuView>
-        </SafeAreaView>
-      )}
-      renderInputToolbar={(props) => {
-        return (
-          <SafeAreaView
-            style={{
-              backgroundColor: Theme.dark.backgroundColor,
-              flex: 1,
-            }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                bottom: topValue,
-              }}
-            >
-              <View
-                style={{
-                  marginLeft: 5,
-                }}
-              >
-                <Ionicons name="add" size={30} color="#F5F5F5" />
-              </View>
-              <View
-                style={{
-                  backgroundColor: "#121212",
-                  borderRadius: 30.0,
-                  height: 32.0,
-                  flexDirection: "row",
-                  alignItems: "center",
-                  width: Dimensions.get("window").width - 90,
-                }}
-              >
-                <View style={{ flex: 1 }}>
-                  <TextInput
-                    cursorColor={"white"}
-                    selectionColor={"white"}
-                    placeholder={`Send a message to ${params.name}`}
-                    style={{
-                      marginLeft: 20,
-                      maxWidth: 250,
-                      color: "white",
-                    }}
-                    placeholderTextColor={"#F5F5F5"}
-                  />
-                </View>
-              </View>
-              <View
-                style={{
-                  marginRight: 5,
-                }}
-              >
-                <Ionicons name="arrow-forward-circle" size={30} color="white" />
-              </View>
-            </View>
-          </SafeAreaView>
-        );
-      }}
-      messages={messages}
-      onSend={(messages) => onSend(messages)}
-      user={{
-        _id: 1,
-      }}
-    />
+    <>
+      <GiftedChat
+        messagesContainerStyle={{
+          backgroundColor: Theme.dark.backgroundColor,
+        }}
+        textInputProps={{
+          ...styles.textInputStyle,
+        }}
+        renderBubble={(props) => (
+          <GiftedChatBubbleComponent initialBubbleProps={props} />
+        )}
+        renderInputToolbar={() => (
+          <GiftedChatInputToolBarComponent
+            username={params?.name}
+            value={topValue}
+          />
+        )}
+        onLongPress={() => {}}
+        messages={messages}
+        user={{
+          _id: 1,
+        }}
+      />
+      <EmojiPicker
+        open={open}
+        onClose={() => setOpen(false)}
+        onEmojiSelected={(emoji) => console.log(emoji)}
+        enableSearchAnimation={true}
+        enableSearchBar={true}
+        expandable={true}
+        theme={RNEmojiKeyboardThemeDark}
+      />
+    </>
   );
 }
 

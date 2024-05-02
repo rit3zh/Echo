@@ -2,6 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "../../pages/screens";
 import { Header } from "@react-navigation/elements";
+import { AppleStyle } from "react-native-scrollable-navigation-bar";
 
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { SafeAreaView, Text, View } from "react-native";
@@ -23,20 +24,18 @@ export function HomeStackScreenNavigator() {
         options={({}) => ({
           headerLargeTitle: true,
           headerLargeStyle: {
-            // backgroundColor: Theme.dark.backgroundColor,
-            backgroundColor: "green",
+            backgroundColor: Theme.dark.backgroundColor,
           },
-          headerSearchBarOptions: {
-            placeholder: "hello",
-            barTintColor: "black",
-          },
+
+          title: "Explore",
+
           headerStyle: {
-            // backgroundColor: Theme.dark.backgroundColor,
-            backgroundColor: "white",
+            backgroundColor: Theme.dark.backgroundColor,
           },
           headerTitleStyle: {
             color: Theme.dark.title,
           },
+
           headerLeft: () => (
             <View
               style={{
