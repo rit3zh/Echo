@@ -1,13 +1,20 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React, { useEffect } from "react";
+import {
+  createNativeStackNavigator,
+  NativeStackView,
+} from "@react-navigation/native-stack";
 import { Chat, Message } from "../../pages/screens";
 import { Theme } from "../../theme/app/constants/theme";
-import { Appearance, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Userpic, Badge } from "react-native-userpic";
+import SegmentedControl from "@react-native-segmented-control/segmented-control";
+import { Constants } from "../../constants";
 
 const Stack = createNativeStackNavigator();
 
 export function ChatStackScreenNavigator() {
+  const effect = useEffect(() => {});
+
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -18,11 +25,12 @@ export function ChatStackScreenNavigator() {
           headerLargeStyle: {
             backgroundColor: Theme.dark.backgroundColor,
           },
+
           headerStyle: {
             backgroundColor: Theme.dark.backgroundColor,
           },
           headerTitleStyle: {
-            color: Theme.dark.title,
+            color: "white",
           },
           headerSearchBarOptions: {
             placeholder: "Search for someone",
@@ -30,6 +38,9 @@ export function ChatStackScreenNavigator() {
             textColor: "white",
             tintColor: "white",
           },
+          headerShown: true,
+          headerLargeTitleShadowVisible: true,
+          autoHideHomeIndicator: true,
         })}
         component={Chat}
       />

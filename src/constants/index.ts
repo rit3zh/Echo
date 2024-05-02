@@ -8,4 +8,8 @@ export namespace Constants {
       DescriptiveEndCreditsText = "Made with the ❤️ of Ritesh",
     }
   }
+
+  export namespace Chat {
+    export const Names = ["Chats", "Rooms"];
+  }
 }

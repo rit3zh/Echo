@@ -15,6 +15,8 @@ import { Item, ISwipeableProps } from "react-native-ui-devkit";
 import { MessageDummyList, type Props } from "../../../constants";
 import { MessageCard } from "./MessageCard";
 import { Theme } from "../../../theme/app/constants/theme";
+import SegmentedControl from "@react-native-segmented-control/segmented-control";
+import { Constants } from "../../../constants/index";
 
 let lastOpened: number = -1;
 

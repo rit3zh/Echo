@@ -1,7 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import { ChatListComponent } from "../../../components/import";
 import { NativeStackHeaderProps } from "@react-navigation/native-stack";
+import { SearchBar } from "react-native-screens";
 
 export function Chat(props: NativeStackHeaderProps) {
   const onPress = (name: string, image: string) =>

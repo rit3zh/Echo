@@ -5,8 +5,7 @@ import { Theme } from "../../../theme/app/constants/theme";
 
 export function Home() {
   return (
-    <View style={{ backgroundColor: Theme.dark.backgroundColor, flex: 1 }}>
-      <AppBoardingComponent />
+    <View style={{ backgroundColor: "black", flex: 1 }}>
       <Text>Home</Text>
     </View>
   );
