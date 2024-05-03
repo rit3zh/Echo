@@ -94,11 +94,8 @@ const App: React.FC<AppProps> = ({ onPress, onContextMenuPress }: AppProps) => {
                 {
                   text: "Ok",
                   onPress: async () => {
-                    item.ref?.hideItem &&
-                      item.ref?.hideItem(() => {
-                        data.splice(index, 1);
-                        setData([...data]);
-                      }, "right");
+                    data.splice(index, 1);
+                    setData([...data]);
                   },
                 },
               ]);

@@ -7,3 +7,4 @@ export { default as ScreenTimeout } from "../screen-timeout/ScreenTimeout";
 export { default as IOSNavigationStyleCustomHeader } from "../header/navigation-style/CustomHeader";
 export { default as GiftedChatInputToolBarComponent } from "../gifted-chat/inpuToolBar/InputToolBar";
 export { default as GiftedChatBubbleComponent } from "../gifted-chat/bubble/GiftedChatBubble";
+export { default as ExploreRoomComponent } from "../home/rooms/ExploreRooms";

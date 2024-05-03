@@ -1,23 +1,32 @@
-import { View, Text } from "react-native";
-import React from "react";
 import {
-  AppBoardingComponent,
-  IOSNavigationStyleCustomHeader,
-} from "../../../components/import";
+  View,
+  Text,
+  FlatList,
+  ListRenderItem,
+  SafeAreaView,
+} from "react-native";
+import React from "react";
+import { ExploreRoomComponent } from "../../../components/import";
 import { Theme } from "../../../theme/app/constants/theme";
-import { AppleStyle } from "react-native-scrollable-navigation-bar";
+import { ROOM_DATA } from "../../../constants/data/RoomDummyData";
+import { Rooms } from "../../../interfaces";
 
 export function Home() {
+  const _renderItem: ListRenderItem<Rooms> = ({ item, index }) => (
+    <ExploreRoomComponent {...item} index={index} length={ROOM_DATA.length} />
+  );
   return (
-    <View
+    <SafeAreaView
       style={{
         backgroundColor: Theme.dark.backgroundColor,
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Text style={{ color: "white" }}>Hello</Text>
-    </View>
+      <FlatList
+        data={ROOM_DATA}
+        keyExtractor={(roomIdentifier) => roomIdentifier._id}
+        renderItem={_renderItem}
+      />
+    </SafeAreaView>
   );
 }
