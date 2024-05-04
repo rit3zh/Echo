@@ -1575,7 +1575,7 @@ index 0000000..29ac2df
 +} // namespace facebook
 \ No newline at end of file
 diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
-index 7149c64..1297858 100644
+index 7149c64..143c85f 100644
 --- a/node_modules/react-native/index.js
 +++ b/node_modules/react-native/index.js
 @@ -380,43 +380,19 @@ module.exports = {
@@ -1589,7 +1589,7 @@ index 7149c64..1297858 100644
 -        'continue using ColorPropType, migrate to the ' +
 -        "'deprecated-react-native-prop-types' package.",
 -    );
-+    
++  
      return require('deprecated-react-native-prop-types').ColorPropType;
    },
    get EdgeInsetsPropType(): $FlowFixMe {

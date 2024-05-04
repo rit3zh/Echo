@@ -4,6 +4,8 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { HomeNavigator } from "../flows";
 import { CustomDrawerContent } from "../components/import";
 import { CreateGroup, Invite, Notifications } from "../pages/screens";
+import { CreateGroupStack } from "../nested/index";
+
 import { Ionicons } from "@expo/vector-icons";
 
 const DrawerStack = createDrawerNavigator();
@@ -46,7 +48,7 @@ export function Drawer() {
             <Ionicons name="add" size={22} color={color} />
           ),
         }}
-        component={CreateGroup}
+        component={CreateGroupStack}
       />
       <DrawerStack.Screen
         name={"Notifications"}
