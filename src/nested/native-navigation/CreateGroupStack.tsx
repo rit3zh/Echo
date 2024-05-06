@@ -1,12 +1,11 @@
 import { View } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { CreateGroup, MessageDisappear } from "../../pages/screens";
+import { CreateGroup } from "../../pages/screens";
 import { Theme } from "../../theme/app/constants/theme";
 import { DrawerToggleButton } from "@react-navigation/drawer";
-import { HeaderBackButton } from "@react-navigation/elements";
-
-const { Navigator, Screen } = createNativeStackNavigator();
+import OptionsNavigator from "./OptionsNavigator";
+const { Navigator, Screen, Group } = createNativeStackNavigator();
 
 export function CreateGroupStack() {
   return (
@@ -35,29 +34,12 @@ export function CreateGroupStack() {
       />
 
       <Screen
-        name="MessageDisappear"
-        component={MessageDisappear}
-        options={({ route, navigation }) => ({
+        name="OptionsNavigator"
+        component={OptionsNavigator}
+        options={{
           presentation: "formSheet",
-          title: "Disappearing Messages",
-          headerStyle: {
-            backgroundColor: Theme.dark.backgroundColor,
-          },
-          headerLeft: () => (
-            <HeaderBackButton
-              canGoBack={true}
-              onPress={() => navigation?.goBack()}
-              style={{
-                right: 10,
-                marginRight: 10,
-              }}
-              tintColor="white"
-            />
-          ),
-          headerTitleStyle: {
-            color: "white",
-          },
-        })}
+          headerShown: false,
+        }}
       />
     </Navigator>
   );

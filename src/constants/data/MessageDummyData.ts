@@ -12,36 +12,35 @@ export const MessageDummyList: Props[] = [
   {
     _id: 1,
     image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
-    name: "Nick Miller",
+      "https://banner2.cleanpng.com/20190606/xch/kisspng-faded-music-mask-disc-jockey-darkside-5cf8dd7baf38c5.5844290115598134997177.jpg",
+    name: "Alan",
     content: "Looking forward to our collaboration!",
   },
   {
     _id: 2,
-    image:
-      "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-    name: "Ashley",
+    image: "https://sosugary.com/wp-content/uploads/2022/01/TheWeeknd_001.jpg",
+    name: "Weekend",
     content: "Amazing!! 🔥🔥🔥",
   },
   {
     _id: 3,
+    name: "Selena",
     image:
-      "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Max",
+      "https://assets.teenvogue.com/photos/589dcce16d33d9e97bc045d2/16:9/w_2560%2Cc_limit/GettyImages-587593904.jpg",
     content: "Appreciate the opportunity to connect and share insights.",
   },
   {
     _id: 4,
+    name: "Shakira",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80",
-    name: "Schmidt",
+      "https://ichef.bbci.co.uk/news/976/cpsprodpb/9A9B/production/_116497593_gettyimages-971720370.jpg",
+
     content: "Let's bring creativity to the forefront of our discussions.",
   },
   {
     _id: 5,
-    image:
-      "https://images.unsplash.com/photo-1553240799-36bbf332a5c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Dwight",
+    name: "K'naan",
+    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
     content: "Excited to explore opportunities for collaboration.",
   },
   {
@@ -49,35 +48,6 @@ export const MessageDummyList: Props[] = [
     image:
       "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     name: "Amy",
-    content: "Eager to contribute and make a positive impact.",
-  },
-
-  {
-    _id: 7,
-    image:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Amy",
-    content: "Eager to contribute and make a positive impact.",
-  },
-  {
-    _id: 8,
-    image:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Amy",
-    content: "Eager to contribute and make a positive impact.",
-  },
-  {
-    _id: 9,
-    image:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Amy",
-    content: "Eager to contribute and make a positive impact.",
-  },
-  {
-    _id: 10,
-    image:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "hey",
     content: "Eager to contribute and make a positive impact.",
   },
 ];

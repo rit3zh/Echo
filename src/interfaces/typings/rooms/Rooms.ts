@@ -15,4 +15,9 @@ export interface Rooms {
   membersCount?: number | any;
   owner?: RoomOwner;
   tags?: string[];
+  props?: {name?: string, options?: {
+    url?: {
+      runs: []{ text?: string }
+    }[]
+  }}
 }

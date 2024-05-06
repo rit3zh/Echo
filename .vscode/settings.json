@@ -1,3 +1,21 @@
 {
-    "typescript.tsserver.maxTsServerMemory": 0
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "editor.fontFamily": "Victor Mono, Comfortaa, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "Consolas",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.accessibilitySupport": "off",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.autoClosingBrackets": "always",
+  "editor.linkedEditing": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.cursorBlinking": "expand"
 }

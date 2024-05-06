@@ -1,33 +1,47 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import {
   Alert,
   FlatList,
   ListRenderItem,
-  Platform,
   SafeAreaView,
+  ScrollView,
   Text,
   View,
 } from "react-native";
 import { ContextMenuView } from "react-native-ios-context-menu";
-
+import Animated, {
+  SlideOutRight,
+  SlideInUp,
+  SlideInDown,
+  SlideOutUp,
+} from "react-native-reanimated";
 // React Native UI DevKit
 import { Item, ISwipeableProps } from "react-native-ui-devkit";
-import { MessageDummyList, type Props } from "../../../constants";
+import {
+  MessageDummyList,
+  RoomDummyList,
+  type Props,
+} from "../../../constants";
 import { MessageCard } from "./MessageCard";
 import { Theme } from "../../../theme/app/constants/theme";
-import SegmentedControl from "@react-native-segmented-control/segmented-control";
-import { Constants } from "../../../constants/index";
 import GiftedChatContext from "../../gifted-chat/context/GiftedChatContext";
-
+// hooks
+import { useSegmentListener } from "../../../hooks";
 let lastOpened: number = -1;
 
 interface AppProps {
-  onPress?: (name: string, avatar?: string) => any | void;
+  onPress?: (
+    name: string,
+    avatar?: string,
+    segmentValue?: string
+  ) => any | void;
   onContextMenuPress?: (name, avatar?: string) => any | void;
 }
 
 const App: React.FC<AppProps> = ({ onPress, onContextMenuPress }: AppProps) => {
   const [data, setData] = useState(MessageDummyList);
+  const [rooms, setRooms] = useState(RoomDummyList);
+  const segmentValue = useSegmentListener();
 
   const closeLastOpened = (index: number) => {
     lastOpened != index && data[lastOpened]?.ref?.closeActions();
@@ -130,7 +144,7 @@ const App: React.FC<AppProps> = ({ onPress, onContextMenuPress }: AppProps) => {
           closeLastOpened(index);
         },
       },
-      onPress: async () => onPress(item.name, item.image),
+      onPress: async () => onPress(item.name, item.image, segmentValue),
     };
 
     return (
@@ -166,7 +180,27 @@ const App: React.FC<AppProps> = ({ onPress, onContextMenuPress }: AppProps) => {
     <SafeAreaView
       style={{ backgroundColor: Theme.dark.backgroundColor, flex: 1 }}
     >
-      <FlatList data={data} renderItem={_render} />
+      <ScrollView>
+        {segmentValue === "Chats" ? (
+          <Animated.FlatList
+            entering={SlideInUp.duration(400).springify()}
+            exiting={SlideOutUp}
+            data={data}
+            renderItem={_render}
+            scrollEnabled={false}
+          />
+        ) : (
+          <Animated.ScrollView
+            scrollEnabled={false}
+            entering={SlideInDown.duration(400).springify()}
+            exiting={SlideOutRight}
+          >
+            {rooms.map((v, index) =>
+              _render({ item: v, index: index, separators: null })
+            )}
+          </Animated.ScrollView>
+        )}
+      </ScrollView>
     </SafeAreaView>
   );
 };

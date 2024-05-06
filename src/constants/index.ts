@@ -1,6 +1,12 @@
 // importing app constants
 
 export * from "./data/MessageDummyData";
+export * from "./time/TimeConstants";
+export * from "./data/StoriesDummyData";
+export * from "./chat/rooms";
+export * from "./data/TotalMembers";
+import { FAKE_CONVERSATION } from "./chat/fake-conversation";
+import { FAKE_ROOM_CONVERSATION } from "./chat/fake-room";
 
 export namespace Constants {
   export namespace App {
@@ -11,5 +17,8 @@ export namespace Constants {
 
   export namespace Chat {
     export const Names = ["Chats", "Rooms"];
+
+    export const FakeConversation = FAKE_CONVERSATION;
+    export const FakeRoomConversation = FAKE_ROOM_CONVERSATION;
   }
 }

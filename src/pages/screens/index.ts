@@ -7,6 +7,8 @@ export * from "./Home/Chat";
 export * from "./Home/Settings";
 export * from "./Home/Message";
 export * from "./Home/MessageDisappear";
+export * from "./Home/CustomTime";
+export * from "./Home/Post";
 // Drawer
 export * from "./Home/Invite";
 export * from "./Home/Create";

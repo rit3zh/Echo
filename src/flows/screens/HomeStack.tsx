@@ -1,17 +1,11 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home } from "../../pages/screens";
-import { Header } from "@react-navigation/elements";
-import { AppleStyle } from "react-native-scrollable-navigation-bar";
-
+import { Home, Post } from "../../pages/screens";
 import { DrawerToggleButton } from "@react-navigation/drawer";
-import { SafeAreaView, Text, View } from "react-native";
+import { View, TouchableHighlight, Text } from "react-native";
 import { Theme } from "../../theme/app/constants/theme";
-import {
-  ScreenStackHeaderConfig,
-  ScreenStackHeaderSearchBarView,
-  SearchBar,
-} from "react-native-screens";
+import { FontAwesome6 } from "@expo/vector-icons";
+import { HeaderBackButton } from "@react-navigation/elements";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +15,7 @@ export function HomeStackScreenNavigator() {
       <Stack.Screen
         name={"HomeScreen"}
         component={Home}
-        options={({}) => ({
+        options={({ navigation }) => ({
           headerLargeTitle: true,
           headerLargeStyle: {
             backgroundColor: Theme.dark.backgroundColor,
@@ -45,6 +39,52 @@ export function HomeStackScreenNavigator() {
               <DrawerToggleButton tintColor="white" />
             </View>
           ),
+
+          headerRight: () => (
+            <React.Fragment>
+              <TouchableHighlight onPress={() => navigation.navigate("Post")}>
+                <FontAwesome6 name="plus" size={24} color="white" />
+              </TouchableHighlight>
+            </React.Fragment>
+          ),
+        })}
+      />
+
+      <Stack.Screen
+        name={"Post"}
+        component={Post}
+        options={({ navigation }) => ({
+          presentation: "formSheet",
+          headerLargeTitle: false,
+          headerLargeStyle: {
+            backgroundColor: Theme.dark.backgroundColor,
+          },
+          title: "Post",
+          headerStyle: {
+            backgroundColor: Theme.dark.backgroundColor,
+          },
+          headerLeft: () => (
+            <HeaderBackButton
+              tintColor="white"
+              label="Explore"
+              labelStyle={{ fontSize: 18 }}
+              onPress={() => navigation.goBack()}
+            />
+          ),
+
+          headerRight: () => (
+            <TouchableHighlight>
+              <Text
+                style={{ color: "white", fontSize: 15.4, fontWeight: "500" }}
+              >
+                Publish
+              </Text>
+            </TouchableHighlight>
+          ),
+
+          headerTitleStyle: {
+            color: Theme.dark.title,
+          },
         })}
       />
     </Stack.Navigator>

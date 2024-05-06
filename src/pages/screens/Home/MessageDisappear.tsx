@@ -46,7 +46,7 @@ export function MessageDisappear(props: NativeStackHeaderProps) {
   const _items: Array<IItemProps & any> = Times.map(({ value, isChecked }) => ({
     title: value,
     style: {
-      backgroundColor: colors.ios.line,
+      backgroundColor: colors.text,
     },
     color: {
       title: "white",
@@ -71,13 +71,13 @@ export function MessageDisappear(props: NativeStackHeaderProps) {
     {
       title: "Custom Time",
       style: {
-        backgroundColor: colors.ios.line,
+        backgroundColor: colors.text,
       },
       color: {
         title: "white",
       },
       chevron: true,
-      onPress: () => {},
+      onPress: () => props.navigation.navigate("CustomTime"),
     },
   ];
 
@@ -95,7 +95,7 @@ export function MessageDisappear(props: NativeStackHeaderProps) {
           sent.
         </Text>
       </View>
-      <List data={_combinedItems} separators={false} onpress={onpress} />
+      <List data={_combinedItems} separators={false} />
     </SafeAreaView>
   );
 }

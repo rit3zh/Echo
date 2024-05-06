@@ -7,7 +7,7 @@ export const useKeyboardListener = (initialTopValue: number) => {
   useLayoutEffect(() => {
     const keyboardDidOpenListener = Keyboard.addListener(
       "keyboardWillShow",
-      () => setTopValue(0)
+      () => setTopValue(15)
     );
     const keyboardDidHideListener = Keyboard.addListener(
       "keyboardWillHide",

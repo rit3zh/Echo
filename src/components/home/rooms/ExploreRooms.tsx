@@ -18,22 +18,56 @@ const ExploreRooms: React.FC<Props> = (props: Props) => {
   return (
     <View style={styles.container}>
       <ContextMenuView
+        previewConfig={{
+          preferredCommitStyle: "pop",
+        }}
         menuConfig={{
           // Note: If you don't want a menu title to appear for your
           // context menu, you can just pass in an empty string
-          menuTitle: "ContextMenuViewExample01",
+          menuTitle: "",
+
           menuItems: [
             {
               actionKey: "key-01",
-              actionTitle: "Action #1",
+              actionTitle: "Favorite",
+              icon: {
+                type: "IMAGE_SYSTEM",
+                imageValue: {
+                  systemName: "star.fill",
+                },
+                imageOptions: {
+                  renderingMode: "alwaysOriginal",
+                  tint: "#FFEA00",
+                },
+              },
             },
             {
               actionKey: "key-02",
-              actionTitle: "Action #2",
+              actionTitle: "Remove",
+              icon: {
+                type: "IMAGE_SYSTEM",
+                imageOptions: {
+                  renderingMode: "alwaysOriginal",
+                  tint: "#D50000",
+                },
+                imageValue: {
+                  systemName: "minus.circle.fill",
+                },
+              },
             },
             {
               actionKey: "key-03",
-              actionTitle: "Action #3",
+              actionTitle: "Join",
+              icon: {
+                type: "IMAGE_SYSTEM",
+                imageOptions: {
+                  renderingMode: "alwaysOriginal",
+                  tint: "#1B5E20",
+                },
+                imageValue: {
+                  systemName: "rectangle.portrait.and.arrow.right.fill",
+                },
+              },
             },
           ],
         }}
@@ -140,6 +174,7 @@ const styles = StyleSheet.create({
     color: "white",
     paddingLeft: 15,
     paddingRight: 15,
+    paddingTop: 5,
   },
   bannerView: {
     justifyContent: "center",
@@ -179,6 +214,6 @@ const styles = StyleSheet.create({
   },
   leftSideContainer: {
     justifyContent: "flex-start",
-    width: "80%",
+    width: "90%",
   },
 });

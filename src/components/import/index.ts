@@ -8,3 +8,11 @@ export { default as IOSNavigationStyleCustomHeader } from "../header/navigation-
 export { default as GiftedChatInputToolBarComponent } from "../gifted-chat/inpuToolBar/InputToolBar";
 export { default as GiftedChatBubbleComponent } from "../gifted-chat/bubble/GiftedChatBubble";
 export { default as ExploreRoomComponent } from "../home/rooms/ExploreRooms";
+export { default as StoryViewComponent } from "../stories/StoryView";
+export { default as GiftedChatMessageTextComponent } from "../gifted-chat/bubble/GiftedChatMessageText";
+export { default as ReactionComponent } from "../gifted-chat/bubble/Reaction";
+export { default as RoomGiftedChatComponent } from "../gifted-chat/room/RoomGiftedChat";
+export { default as RoomNavigationHeader } from "../gifted-chat/room/RoomNavigationHeader";
+export { default as ChatScreenHeaderNavigator } from "../gifted-chat/room/ChatScreenHeaderNavigator";
+
+export { default as NavigatorHeaderRoom } from "../gifted-chat/room/RoomNavigationHeader";

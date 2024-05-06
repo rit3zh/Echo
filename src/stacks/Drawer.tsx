@@ -1,10 +1,9 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { HomeNavigator } from "../flows";
 import { CustomDrawerContent } from "../components/import";
-import { CreateGroup, Invite, Notifications } from "../pages/screens";
-import { CreateGroupStack } from "../nested/index";
+import { Invite } from "../pages/screens";
+import { CreateGroupStack, NotificationNavigator } from "../nested/index";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -17,6 +16,7 @@ export function Drawer() {
       screenOptions={{
         drawerActiveTintColor: "white",
         drawerInactiveTintColor: "gray",
+
         drawerActiveBackgroundColor: "transparent",
       }}
     >
@@ -62,7 +62,7 @@ export function Drawer() {
             <Ionicons name="notifications-outline" size={22} color={color} />
           ),
         }}
-        component={Notifications}
+        component={NotificationNavigator}
       />
 
       <DrawerStack.Screen

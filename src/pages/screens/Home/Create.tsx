@@ -126,7 +126,7 @@ export const CreateGroup = (props: NativeStackHeaderProps) => {
 
       component: <MessagePresentationComponent />,
 
-      onPress: () => props.navigation.navigate("MessageDisappear"),
+      onPress: () => props.navigation.navigate("OptionsNavigator"),
     },
   ];
 

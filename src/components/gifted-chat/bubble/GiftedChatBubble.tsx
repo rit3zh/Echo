@@ -1,15 +1,18 @@
-import { SafeAreaView } from "react-native";
+import { Dimensions, SafeAreaView } from "react-native";
 import React from "react";
 import {
   type OnPressMenuItemEventObject,
   ContextMenuView,
 } from "react-native-ios-context-menu";
 import { MENU_PROPS } from "../../../constants/context-menu/Config";
-import { Bubble, type IMessage } from "react-native-gifted-chat";
+import { Bubble, MessageText, type IMessage } from "react-native-gifted-chat";
+import type { ExtendedMessage } from "../../../interfaces";
 
+import Reaction from "./Reaction";
+import { responsiveWidth } from "react-native-responsive-dimensions";
 interface Props {
   onMenuPress?: (nativeEvent: OnPressMenuItemEventObject) => any | void;
-  initialBubbleProps?: Bubble<IMessage>["props"];
+  initialBubbleProps?: Bubble<ExtendedMessage>["props"];
 }
 
 const GiftedChatBubble: React.FC<Props> = ({
@@ -17,15 +20,27 @@ const GiftedChatBubble: React.FC<Props> = ({
   initialBubbleProps,
 }: Props) => {
   return (
-    <SafeAreaView
+    <ContextMenuView
+      {...MENU_PROPS}
+      onPressMenuItem={onMenuPress}
       style={{
-        marginBottom: 20,
+        marginTop: 5,
+        width: responsiveWidth(88),
       }}
     >
-      <ContextMenuView {...MENU_PROPS} onPressMenuItem={onMenuPress}>
-        <Bubble {...initialBubbleProps} />
-      </ContextMenuView>
-    </SafeAreaView>
+      <Bubble
+        wrapperStyle={{
+          left: {
+            borderBottomLeftRadius: 1,
+            backgroundColor: "#e6e6e6",
+          },
+          right: {
+            backgroundColor: "#383838",
+          },
+        }}
+        {...initialBubbleProps}
+      />
+    </ContextMenuView>
   );
 };
 

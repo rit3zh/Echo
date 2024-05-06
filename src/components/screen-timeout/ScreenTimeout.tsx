@@ -6,11 +6,13 @@ import Animated, { FadeIn } from "react-native-reanimated";
 interface Props {
   children: ReactNode;
   timeout?: number;
+  backgroundColor?: string;
 }
 
 const ScreenTimeout: React.FC<Props> = ({
   children,
   timeout,
+  backgroundColor,
 }: Props): JSX.Element & React.ReactNode => {
   const [isScreenVisible, setIsScreenVisible] = useState<boolean>(false);
   useEffect(() => {
@@ -27,6 +29,8 @@ const ScreenTimeout: React.FC<Props> = ({
     <Animated.View
       style={{
         flex: 1,
+        backgroundColor:
+          typeof backgroundColor !== "string" ? "#fff" : backgroundColor,
       }}
       entering={FadeIn}
     >
