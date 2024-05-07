@@ -5,6 +5,7 @@ export * from "./time/TimeConstants";
 export * from "./data/StoriesDummyData";
 export * from "./chat/rooms";
 export * from "./data/TotalMembers";
+export * from "./app/disappearOptions";
 import { FAKE_CONVERSATION } from "./chat/fake-conversation";
 import { FAKE_ROOM_CONVERSATION } from "./chat/fake-room";
 

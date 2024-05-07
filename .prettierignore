@@ -1,0 +1,24 @@
+# Ignore build artifacts and directories
+build/
+dist/
+out/
+.tmp/
+
+# Ignore compiled code
+*.min.js
+*.min.css
+
+# Ignore vendor directories
+node_modules/
+bower_components/
+
+# Ignore generated files
+coverage/
+.vscode/
+
+# Ignore specific files
+package-lock.json
+yarn.lock
+
+# Ignore files in specific directories
+src/generated/

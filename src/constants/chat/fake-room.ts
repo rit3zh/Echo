@@ -79,12 +79,14 @@ function generateFakeConversation(): IMessage[] {
       text: generateRandomMessageText(i + 1),
       createdAt: new Date(lastMessageTime),
       user: {
-        _id: i % 2 === 0 ? 1 : 2, // Alternate between two users
+        _id: i % 2 === 0 ? 1 : 8, // Alternate between two users
         name: generateRandomName(),
         avatar: generateRandomAvatar(),
       },
     };
-    conversation.push(message);
+    conversation.push({
+      ...message,
+    });
   }
 
   return conversation;

@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import { Theme } from "../../../theme/app/constants/theme";
 import { IItemProps, Item, List, useColors } from "react-native-ui-devkit";
 import { NativeStackHeaderProps } from "@react-navigation/native-stack";
-import { createIcon } from "native-base";
+import { DisappearOptions } from "../../../constants";
 
 export function MessageDisappear(props: NativeStackHeaderProps) {
   const colors = useColors();
@@ -23,16 +23,7 @@ export function MessageDisappear(props: NativeStackHeaderProps) {
         ) : null,
     });
   }, [isSelected]);
-  const [Times, setTimes] = useState([
-    { value: "Off", isChecked: false },
-    { value: "3 weeks", isChecked: false },
-    { value: "1 week", isChecked: false },
-    { value: "1 day", isChecked: false },
-    { value: "8 hours", isChecked: false },
-    { value: "1 hour", isChecked: false },
-    { value: "10 minutes", isChecked: false },
-    { value: "5 minutes", isChecked: false },
-  ]);
+  const [Times, setTimes] = useState(DisappearOptions);
 
   const handlePress = (value) => {
     const updatedTimes = Times.map((time) => ({

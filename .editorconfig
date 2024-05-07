@@ -1,0 +1,32 @@
+# EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs
+# For more information, visit http://editorconfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Default settings apply to all files unless overridden by specific file types
+[*]
+# Indentation settings
+indent_style = space
+indent_size = 2
+
+# End-of-line characters
+end_of_line = lf
+
+# Charset settings
+charset = utf-8
+
+# Trim trailing whitespaces and insert final newline
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Set default tab width for specific file types
+[*.js]
+indent_size = 2
+indent_style = space
+
+[*.json]
+indent_size = 2
+indent_style = space
+
+# Add more file type specific settings as needed

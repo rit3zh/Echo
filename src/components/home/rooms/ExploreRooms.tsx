@@ -18,9 +18,6 @@ const ExploreRooms: React.FC<Props> = (props: Props) => {
   return (
     <View style={styles.container}>
       <ContextMenuView
-        previewConfig={{
-          preferredCommitStyle: "pop",
-        }}
         menuConfig={{
           // Note: If you don't want a menu title to appear for your
           // context menu, you can just pass in an empty string

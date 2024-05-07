@@ -36,7 +36,7 @@ export const Component: React.FC<Props> = ({
             style={{
               flex: 1,
             }}
-            onValueChange={(val) => onValueChange(val.toString())}
+            onValueChange={(val) => onTimeValueChange(val.toString())}
             itemStyle={{ color: "white" }}
             selectedValue={time}
           >
@@ -62,8 +62,8 @@ export const Component: React.FC<Props> = ({
             style={{
               flex: 1,
             }}
-            onValueChange={(val) => onTimeValueChange(val.toString())}
-            selectedValue={time}
+            onValueChange={(val) => onValueChange(val.toString())}
+            selectedValue={duration}
           >
             {Constants.Time.map((v, i) => (
               <PickerIOSItem

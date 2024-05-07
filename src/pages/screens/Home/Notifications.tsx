@@ -22,7 +22,7 @@ export function Notifications() {
               style={[
                 styles.fakeCircle,
                 {
-                  backgroundColor: colors.ios.line,
+                  backgroundColor: colors.text,
                 },
               ]}
             />
@@ -31,7 +31,7 @@ export function Notifications() {
               <View
                 style={[
                   styles.fakeLine,
-                  { width: 120, backgroundColor: colors.ios.line },
+                  { width: 120, backgroundColor: colors.text },
                 ]}
               />
 
@@ -39,7 +39,7 @@ export function Notifications() {
                 style={[
                   styles.fakeLine,
                   {
-                    backgroundColor: colors.ios.line,
+                    backgroundColor: colors.text,
                   },
                 ]}
               />
@@ -50,7 +50,7 @@ export function Notifications() {
                   {
                     width: 70,
                     marginBottom: 0,
-                    backgroundColor: colors.ios.line,
+                    backgroundColor: colors.text,
                   },
                 ]}
               />
@@ -62,7 +62,7 @@ export function Notifications() {
               style={[
                 styles.fakeCircle,
                 {
-                  backgroundColor: colors.ios.line,
+                  backgroundColor: colors.text,
                 },
               ]}
             />
@@ -71,7 +71,7 @@ export function Notifications() {
               <View
                 style={[
                   styles.fakeLine,
-                  { width: 120, backgroundColor: colors.ios.line },
+                  { width: 120, backgroundColor: colors.text },
                 ]}
               />
 
@@ -79,7 +79,7 @@ export function Notifications() {
                 style={[
                   styles.fakeLine,
                   {
-                    backgroundColor: colors.ios.line,
+                    backgroundColor: colors.text,
                   },
                 ]}
               />
@@ -90,7 +90,7 @@ export function Notifications() {
                   {
                     width: 70,
                     marginBottom: 0,
-                    backgroundColor: colors.ios.line,
+                    backgroundColor: colors.text,
                   },
                 ]}
               />

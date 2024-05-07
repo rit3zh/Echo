@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "node"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm test
+  # Add additional build or test commands as needed
+
+branches:
+  only:
+    - main
+    # Add other branches you want to build here
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
