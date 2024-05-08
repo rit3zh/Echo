@@ -82,4 +82,4 @@ To install Echo, follow these steps:
 > Don't forgot to add `GoogleService-info.plist file` inside of your `ios/Echo` folde.
 
 
-### ⭐ Leave a Star if you like this repostitory ⭐
+### ⭐ Consider leaving a Star if you like this repository. ⭐
