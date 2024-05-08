@@ -3,7 +3,7 @@
     
 </p>
 <p align="center">
-    <img src="./src/assets/echo-2.jpg" width="100">
+    <img src="./src/assets/echo-2.jpg" width=100>
         <h1 align="center">Echo
         <h2 align="center">The most complete Chat UI App ❤️
 </p>
