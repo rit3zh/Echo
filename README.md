@@ -65,7 +65,7 @@
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |
-<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/home.jpg"> | <img alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/swipe.jpg">|<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/settings.jpg">
+<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/home.jpg"> | <img alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/swipe.jpg">|<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/settings.jpg">|
 
 # Installation ❓
 
