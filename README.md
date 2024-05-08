@@ -65,8 +65,8 @@
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/home.jpg"> | <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/swipe.jpg">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/settings.jpg">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/drawer.jpg">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/post.jpg">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/drawer.jpg">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/post.jpg">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/stories.jpg">|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/chatscreen.jpg">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/groupscreen.jpg">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/contextmenu.jpg">|
 
 
 # Installation ❓
