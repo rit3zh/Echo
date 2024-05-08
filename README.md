@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="./src/assets/echo-banner.jpg" width=540>
+    <img src="./assets/echo-banner.jpg" width=540>
     
 </p>
 <p align="center">
-    <img src="./src/assets/echo-2.jpg" width=100>
+    <img src="./assets/echo-2.jpg" width=100>
         <h1 align="center">Echo
         <h2 align="center">The most complete Chat UI App ❤️
 </p>
@@ -65,7 +65,7 @@
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |
-<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./src/assets/home.jpg"> | <img alt="screen shot 2017-08-07 at 12 18 15 pm" src="./src/assets/swipe.jpg">|<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./src/assets/settings.jpg">
+<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/home.jpg"> | <img alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/swipe.jpg">|<img  alt="screen shot 2017-08-07 at 12 18 15 pm" src="./assets/settings.jpg">
 
 # Installation ❓
 
