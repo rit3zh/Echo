@@ -1,11 +1,5 @@
 <p align="center">
     <img src="./assets/echo-banner.jpg" width=540>
-    
-</p>
-<p align="center">
-    <img src="./assets/echo-2.jpg" width=100>
-        <h1 align="center">Echo
-        <h2 align="center">The most complete Chat UI App ❤️
 </p>
 </p>
 
@@ -32,10 +26,11 @@
   <a href="https://github.com/rit3zh/Echo" target="_blank">
 <img src="https://a11ybadges.com/badge?logo=apple" />
   </a>
-  
+  <p align="center">
   <a>
   <img src="https://a11ybadges.com/badge?logo=xcode&color" />
   </a>
+  </p>
 </p>
 </p>
 
