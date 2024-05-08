@@ -79,7 +79,7 @@ To install Echo, follow these steps:
 5. Run the application: `npm run ios`
 
 > [!WARNING]  
-> Don't forgot to add `GoogleService-info.plist file` inside of your `ios/Echo` folde.
+> Don't forgot to add `GoogleService-info.plist file` inside of your `ios/Echo` folder
 
 
 ### ⭐ Consider leaving a Star if you like this repository. ⭐
