@@ -55,7 +55,7 @@
 > [!NOTE]  
 > Make sure to check out the attached ScreenShots.
 
-# ScreenShots 📷
+# Screenshots 📷
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
